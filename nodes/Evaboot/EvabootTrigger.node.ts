@@ -138,6 +138,8 @@ export class EvabootTrigger implements INodeType {
 					secret,
 					kind: KINDS[event],
 					label: `n8n: ${this.getWorkflow().name ?? 'workflow'}`,
+					// Evaboot hides managed rows from its dashboard; this node owns the lifecycle.
+					managed: true,
 				};
 				const response = await evabootRequest(this, 'POST', '', body);
 				const integration = response.body.integration as IDataObject | undefined;
