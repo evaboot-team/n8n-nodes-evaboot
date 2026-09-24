@@ -1,6 +1,6 @@
 {
 	"name": "@evaboot-team/n8n-nodes-evaboot",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "n8n node for Evaboot — LinkedIn data extraction and email finding",
 	"license": "MIT",
 	"homepage": "https://evaboot.com",
