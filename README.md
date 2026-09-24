@@ -50,7 +50,7 @@ Activating the workflow creates an integration named "n8n: <workflow name>" in y
 ## Troubleshooting
 
 - **The trigger stopped firing.** After 5 failed deliveries in a row, Evaboot turns the integration off, and it shows as down in the Evaboot dashboard. Switch the workflow off and on again to restore it.
-- **No deliveries at all.** Accounts that have not claimed their Evaboot login since the 2026 migration receive no deliveries. Sign in to the Evaboot dashboard once to claim it.
+- **No deliveries at all.** Deliveries only reach accounts claimed since the 2026 migration: the Evaboot account needs its own password or a linked social sign-in.
 
 ## Resources
 
