@@ -1,11 +1,13 @@
-# n8n-nodes-evaboot
+# @evaboot-team/n8n-nodes-evaboot
 
 n8n community node for [Evaboot](https://evaboot.com). Extract LinkedIn Sales Navigator data, find and verify professional emails, and start workflows when an Evaboot export or email job finishes.
+
+This package replaces `n8n-nodes-evaboot` (0.1.x), which is no longer maintained.
 
 ## Installation
 
 - **n8n Cloud:** open the Nodes panel, search for "Evaboot", and install it (available once the node is verified by n8n).
-- **Self-hosted:** go to **Settings → Community Nodes → Install**, enter `n8n-nodes-evaboot`, and click **Install**.
+- **Self-hosted:** go to **Settings → Community Nodes → Install**, enter `@evaboot-team/n8n-nodes-evaboot`, and click **Install**.
 
 For more details, see the [n8n community nodes installation guide](https://docs.n8n.io/integrations/community-nodes/installation/).
 

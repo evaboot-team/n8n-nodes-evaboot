@@ -1,5 +1,5 @@
 {
-	"name": "n8n-nodes-evaboot",
+	"name": "@evaboot-team/n8n-nodes-evaboot",
 	"version": "0.2.0",
 	"description": "n8n node for Evaboot — LinkedIn data extraction and email finding",
 	"license": "MIT",
@@ -31,6 +31,9 @@
 	"files": [
 		"dist"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"strict": true,
