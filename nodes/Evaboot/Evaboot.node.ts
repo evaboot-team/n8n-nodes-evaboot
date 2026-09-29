@@ -1,5 +1,7 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 
+import { waitForSingleResult } from './GenericFunctions';
+
 export class Evaboot implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Evaboot',
@@ -250,6 +252,7 @@ export class Evaboot implements INodeType {
 						description: 'Find an email for a single person',
 						routing: {
 							request: { method: 'POST', url: '/email-finder/single/' },
+							output: { postReceive: [waitForSingleResult] },
 						},
 					},
 					{
@@ -469,6 +472,7 @@ export class Evaboot implements INodeType {
 						description: 'Validate a single email address',
 						routing: {
 							request: { method: 'POST', url: '/email-validation/single/' },
+							output: { postReceive: [waitForSingleResult] },
 						},
 					},
 					{
@@ -590,6 +594,23 @@ export class Evaboot implements INodeType {
 				description: 'ID of the email validation job to retrieve',
 				displayOptions: {
 					show: { resource: ['emailValidation'], operation: ['get'] },
+				},
+			},
+
+			// Shared by the single find and single verify operations
+			{
+				displayName: 'Max Wait (Seconds)',
+				name: 'maxWaitSeconds',
+				type: 'number',
+				typeOptions: { minValue: 0, maxValue: 600 },
+				default: 150,
+				description:
+					'A slow lookup answers "running" after about 25 seconds. The node then checks the job every 4 seconds until the result is ready or this time runs out. Set 0 to return the running answer straight away.',
+				displayOptions: {
+					show: {
+						resource: ['emailFinder', 'emailValidation'],
+						operation: ['findSingle', 'validateSingle'],
+					},
 				},
 			},
 
