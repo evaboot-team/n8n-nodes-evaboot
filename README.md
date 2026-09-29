@@ -37,6 +37,8 @@ For more details, see the [n8n community nodes installation guide](https://docs.
 | Email Validation | List | `GET /v1/email-validation/` |
 | Account | Get Quota | `GET /v1/quota/` |
 
+**Slow single lookups:** Find Single Email and Validate Single Email answer "running" when a check takes longer than about 25 seconds. The node then checks the job every 4 seconds and returns the final result, for up to **Max Wait (Seconds)** (150 by default). If the result is still not ready, the node returns the running answer with its `job_id`, which you can read later with the Get operation.
+
 ## Trigger (Evaboot Trigger node)
 
 The trigger starts a workflow when one of these events happens:
