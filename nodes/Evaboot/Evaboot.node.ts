@@ -189,28 +189,6 @@ export class Evaboot implements INodeType {
 					},
 				},
 			},
-			// Extraction fields: enrich_email (all create operations)
-			{
-				displayName: 'Enrich Email',
-				name: 'enrichEmail',
-				type: 'options',
-				default: 'none',
-				description: 'Email enrichment option',
-				displayOptions: {
-					show: {
-						resource: ['extraction'],
-						operation: ['createUrl', 'createProfiles', 'createSingle'],
-					},
-				},
-				options: [
-					{ name: 'None', value: 'none' },
-					{ name: 'Matching', value: 'matching' },
-					{ name: 'All', value: 'all' },
-				],
-				routing: {
-					send: { type: 'body', property: 'enrich_email' },
-				},
-			},
 			// Extraction fields: id (get)
 			{
 				displayName: 'Extraction ID',

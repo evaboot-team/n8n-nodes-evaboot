@@ -37,6 +37,8 @@ For more details, see the [n8n community nodes installation guide](https://docs.
 | Email Validation | List | `GET /v1/email-validation/` |
 | Account | Get Quota | `GET /v1/quota/` |
 
+Every extraction includes verified emails where one exists, at 1 credit per lead. Email Finder costs 1 credit per email found, and Email Validation 1 credit per email checked.
+
 ## Trigger (Evaboot Trigger node)
 
 The trigger starts a workflow when one of these events happens:
