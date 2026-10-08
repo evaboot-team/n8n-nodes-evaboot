@@ -14,7 +14,7 @@ For more details, see the [n8n community nodes installation guide](https://docs.
 ## Credentials
 
 1. In n8n, go to **Settings → Credentials → Add Credential → Evaboot API**.
-2. Enter your API key from the Evaboot dashboard ([app.evaboot.com/settings](https://app.evaboot.com/settings)).
+2. Enter your API key from the Evaboot dashboard ([dash.evaboot.com/dash/api](https://dash.evaboot.com/dash/api/)).
 3. Leave **Base URL** at its default, `https://api.evaboot.com`.
 4. Click **Test** to verify, then **Save**.
 
